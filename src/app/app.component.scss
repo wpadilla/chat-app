@@ -1,0 +1,135 @@
+body {
+  background-color: #e4e4e4;
+}
+.siwtch-button-wrapper {
+  margin-bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  select {
+    width: 150px;
+    height: 30px;
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+}
+
+.chat-wrapper {
+  position: relative;
+  margin: 30px auto;
+  border-radius: 15px;
+  border: 1px solid #7a7a7a;
+  display: flex;
+  width: 80%;
+  background-color: white;
+  overflow: hidden;
+  height: 600px;
+
+  .conversations-wrapper {
+    border-right: 1px solid #7a7a7a;
+    min-width: 30%;
+    overflow: auto;
+    .conversation-item {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      cursor: pointer;
+      border-bottom: 1px solid #7a7a7a;
+      &:hover, &.selected {
+        background-color: rgba(0,0,0,.3);
+        color: white;
+      }
+      &:last-of-type {
+        border: none;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50px;
+        object-fit: cover;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .messages-wrapper {
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: auto;
+    position: relative;
+    overflow-x: hidden;
+
+    .message-list-wrapper {
+      margin-bottom: 30px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      overflow: auto;
+      position: relative;
+      padding-right: 20px;
+      .message-item {
+        display: flex;
+        border-radius: 25px;
+        margin-bottom: 15px;
+        padding: 10px;
+        align-self: flex-start;
+        background-color: #7a7a7a;
+        color: white;
+        align-items: center;
+        .message-opts {
+          margin-left: 15px;
+          i {
+            cursor: pointer;
+          }
+          i:first-of-type {
+            margin-right: 10px;
+          }
+        }
+        &.from-message {
+          align-self: flex-end;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    .send-message-wrapper {
+      position: relative;
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      bottom: 0;
+      align-self: center;
+      box-sizing: border-box;
+
+      input {
+        width: 100%;
+        margin-right: 15px;
+        height: 40px;
+        padding-left: 15px;
+        border-radius: 10px;
+        border: 1px solid #7a7a7a;
+      }
+
+      button {
+        background: white;
+        border: 1px solid #7a7a7a;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0,0,0, .4);
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
